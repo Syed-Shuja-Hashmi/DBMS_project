@@ -1,4 +1,4 @@
-#Online Car Rental System#
+#Online Car Rental System
 **Database Systems Project**
 
 Technologies: MySQL, PHP, HTML and CSS
