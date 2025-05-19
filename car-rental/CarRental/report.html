@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental</title>
+    <link href="pstyles.css?v=1.2" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <marquee>Reminder: Monthly performance reports are due by the 28th. | New vehicle batch
+        arriving next week – update inventory. | Monitor peak holiday bookings – ensure chauffeur
+        availability.
+    </marquee>
+
+    <!-- Header with Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Car Rentals</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="customer.html">Customers</a></li>
+                <li><a href="chauffeur.html">Chauffeur</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="book.html">Book Car</a></li>
+                <li><a href="return.html">Return Car</a></li>
+                <li class="active"><a href="report.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="allContent">
+        <div class="leftContent">
+            <form action="report.php" method="post">
+                <h2>View profits for owners :</h2> <br>
+                <input type="submit" name="cartype1" value="View based on Owner id">
+            </form>
+            <br><br>
+            <form action="report1.php" method="post">
+                <h2>View profits for Car types :</h2> <br>
+                <input type="submit" name="cartype1" value="View based on Car Types">
+            </form>
+            <br><br>
+        </div>
+        <div class="rightContent">
+            <form action="report2.php" method="post">
+                <h2>View profits for individual car units :</h2> <br>
+                <input type="submit" name="cartype1" value="View based on Car units">
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2025 Car Rental System</p>
+    </footer>
+</body>
+
+</html>

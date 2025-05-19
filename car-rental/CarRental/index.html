@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Car Rental</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/menuBackground.png" type="image/png">
+  <meta name="theme-color" content="#ff9c00">
+</head>
+
+<body>
+  <div class="announcement-bar" id="announcementBar">
+    <span>Reminder: Monthly performance reports are due by the 28th. | New vehicle batch arriving next week – update inventory. | Monitor peak holiday bookings – ensure chauffeur availability.</span>
+    <button aria-label="Close" onclick="document.getElementById('announcementBar').style.display='none'">&times;</button>
+  </div>
+
+  <!-- Header with Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Car Rentals</div>
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="customer.html">Customers</a></li>
+        <li><a href="chauffeur.html">Chauffeur</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="book.html">Book Car</a></li>
+        <li><a href="return.html">Return Car</a></li>
+        <li><a href="report.html">Report</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- Hero Section -->
+  <section class="hero">
+    <h1>CAR RENTALS</h1>
+  </section>
+
+  <!-- Main Content -->
+  <main class="allContent">
+    <div class="leftContent">
+      <p>
+        <p>Welcome to the Car Rental Admin Dashboard. Manage customers, vehicles, bookings, and 
+          reports efficiently. Ensure smooth operations and provide premium service experiences.
+        </p>
+      </p>
+    </div>
+    <div class="rightContent">
+      <ul>
+        <li>24/7 Customer Support</li>
+        <li>Well-maintained Vehicles</li>
+        <li>Trusted Chauffeurs</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Car Rental System</p>
+  </footer>
+  <script>
+    // Optionally, auto-hide announcement after 10s
+    setTimeout(()=>{
+      const bar = document.getElementById('announcementBar');
+      if(bar) bar.style.display = 'none';
+    }, 10000);
+  </script>
+</body>
+
+</html>

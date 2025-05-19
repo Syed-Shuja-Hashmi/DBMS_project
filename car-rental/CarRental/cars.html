@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Car Rental</title>
+	<link href="pstyles.css?v=1.2" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<marquee>Reminder: Monthly performance reports are due by the 28th. | New vehicle batch
+		arriving next week – update inventory. | Monitor peak holiday bookings – ensure chauffeur
+		availability.
+	</marquee> 
+
+	<!-- Header with Navbar -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="logo">Car Rentals</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="customer.html">Customers</a></li>
+				<li><a href="chauffeur.html">Chauffeur</a></li>
+				<li class="active"><a href="cars.html">Cars</a></li>
+				<li><a href="book.html">Book Car</a></li>
+				<li><a href="return.html">Return Car</a></li>
+				<li><a href="report.html">Report</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="allContent">
+		<div class="leftContent">
+			<b>
+				<form action="registercar.php" method="post">
+	<h1> ADD CAR </h1>
+	License No: <input type="text" name="lno" /><br><br>
+	Model: <input type="text" name="model" /><br><br>
+	Year : <input type="text" name="year" /><br><br>
+	Car type: 
+	<select name="Cartype">
+		<option>Compact</option>
+		<option>Medium</option>
+		<option>Large</option>
+		<option>SUV</option>
+		<option>Van</option>
+		<option>Truck</option>
+	</select><br><br>
+
+	<!-- ✅ Add this block below Car type -->
+	Daily Rate: <input type="text" name="daily_rate" /><br><br>
+	Weekly Rate: <input type="text" name="weekly_rate" /><br><br>
+
+	Car Owner: 
+	<select name="Carown">
+		<option>Individual</option>
+		<option>Bank</option>
+		<option>Company</option>
+	</select><br><br>
+
+	<h2>Enter Owner Details : </h2><br>
+	Unique ID: <input type="text" name="uid" /><br><br>
+	Name: <input type="text" name="oname" /><br><br>
+	City : <input type="text" name="city" /><br><br>
+	<input type="submit" name="submit" value="Register">
+</form>
+
+			</b>
+		</div>
+
+
+		<div class="rightContent">
+			<h1> VIEW CARS & RATES</h1>
+			<form action="viewcar.php" method="post">
+				Select Car type to view: <select name="Ctype">
+					<option>Compact</option>
+					<option>Medium</option>
+					<option>Large</option>
+					<option>SUV</option>
+					<option>Van</option>
+					<option>Truck</option>
+				</select>
+				<input type="submit" name="submit1" value="View">
+			</form>
+
+			<br><br><br><br>
+
+			<h1> UPDATE RENTAL RATES </h1>
+			<form action="update.php" method="post">
+				Select Car type to update: <select name="Ctype">
+					<option>Compact</option>
+					<option>Medium</option>
+					<option>Large</option>
+					<option>SUV</option>
+					<option>Van</option>
+					<option>Truck</option>
+				</select><br><br>
+				Daily Rate: <input type="text" name="udrate" /><br><br>
+				Weekly Rate: <input type="text" name="uwrate" /><br><br>
+				<input type="submit" name="submit1" value="Update">
+			</form>
+		</div>
+	</main>
+
+	<footer id="footer">
+		<p>&copy; 2025 Car Rental System</p>
+	</footer>
+</body>
+
+</html>

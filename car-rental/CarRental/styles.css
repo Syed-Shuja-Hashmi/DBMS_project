@@ -1,0 +1,244 @@
+/* Modernized CSS with variables, improved forms, buttons, announcement bar, and cards */
+:root {
+  --primary: #ff9c00;
+  --primary-dark: #e68a00;
+  --bg: #23272f;
+  --bg-light: #2d323c;
+  --text: #fff;
+  --text-muted: #bbb;
+  --card-bg: #292e39;
+  --border-radius: 12px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.12);
+  --transition: 0.2s all cubic-bezier(.4,0,.2,1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.announcement-bar {
+  background: var(--primary);
+  color: #222;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 10;
+}
+.announcement-bar button {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.7rem;
+  cursor: pointer;
+}
+
+/*─────────────────────────────────────────────────────────
+  Hero
+─────────────────────────────────────────────────────────*/
+.hero {
+  position: relative;
+  background: url('images/pageBackground.jpg') center/cover no-repeat;
+  height: 50vh;
+  min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  border-radius: var(--border-radius);
+  margin: 2rem 0 1rem 0;
+  box-shadow: var(--shadow);
+}
+.hero h1 {
+  font-size: 3.2rem;
+  text-shadow: 0 2px 8px #000a;
+}
+
+/*─────────────────────────────────────────────────────────
+  Navbar
+─────────────────────────────────────────────────────────*/
+.header {
+  background: #000;
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar li.active a,
+.navbar li a:hover {
+  color: var(--primary);
+}
+
+/*─────────────────────────────────────────────────────────
+  Main Content
+─────────────────────────────────────────────────────────*/
+.allContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.leftContent, .rightContent, .centerContent {
+  background: var(--card-bg);
+  padding: 2rem 1.5rem;
+  flex: 1 1 320px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+.card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, select, textarea {
+  padding: 0.7rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #444;
+  background: #222;
+  color: var(--text);
+  font-size: 1rem;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-dark)33;
+}
+button, input[type="submit"], input[type="button"] {
+  background: var(--primary);
+  color: #222;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  box-shadow: 0 2px 8px #0002;
+}
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/*─────────────────────────────────────────────────────────
+  Footer
+─────────────────────────────────────────────────────────*/
+#footer {
+  text-align: center;
+  background: #111;
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+  margin-top: auto;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: var(--shadow);
+}
+
+/* Table Modernization */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 1rem 0;
+}
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+th {
+  background: var(--primary);
+  color: #222;
+  font-weight: 700;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+/*─────────────────────────────────────────────────────────
+  Responsive
+─────────────────────────────────────────────────────────*/
+@media (max-width: 900px) {
+  .allContent {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .leftContent, .rightContent, .centerContent {
+    min-width: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .allContent {
+    padding: 0;
+  }
+}
+
+/* Animations */
+input, select, button, .card, .announcement-bar {
+  transition: var(--transition);
+}

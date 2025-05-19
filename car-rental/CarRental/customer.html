@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Car Rental</title>
+	<link href="pstyles.css?v=1.2" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<marquee>Reminder: Monthly performance reports are due by the 28th. | New vehicle batch
+		arriving next week – update inventory. | Monitor peak holiday bookings – ensure chauffeur
+		availability.
+	</marquee>
+
+	<!-- Header with Navbar -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="logo">Car Rentals</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="customer.html">Customers</a></li>
+				<li><a href="chauffeur.html">Chauffeur</a></li>
+				<li><a href="cars.html">Cars</a></li>
+				<li><a href="book.html">Book Car</a></li>
+				<li><a href="return.html">Return Car</a></li>
+				<li><a href="report.html">Report</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main class="allContent">
+		<div class="leftContent">
+			<b>
+				<form action="regcustomer.php" method="post">
+					<h1> ADD CUSTOMER </h1>
+					First Name: <input type="text" name="fname" /><br><br>
+					Last Name: <input type="text" name="lname" /><br><br>
+					Age : <input type="text" name="age" /><br><br>
+					Mobile: <input type="text" name="mobile" /><br><br>
+					Driving License No: <input type="text" name="dlno" /><br><br>
+					Insurance No:<input type="text" name="ino" /><br><br>
+					<input type="submit" name="submit" value="Register">
+				</form>
+			</b>
+		</div>
+
+		<div class="rightContent">
+			<b>
+				<form action="viewcustomer.php" method="post">
+					<h1> VIEW CUSTOMERS </h1>
+					<input type="submit" value="View" />
+				</form>
+			</b>
+		</div>
+	</main>
+
+	<footer id="footer">
+		<p>&copy; 2025 Car Rental System</p>
+	</footer>
+
+</body>
+
+</html>

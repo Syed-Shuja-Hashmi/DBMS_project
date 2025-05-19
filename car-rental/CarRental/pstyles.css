@@ -1,0 +1,170 @@
+/*─────────────────────────────────────────────────────────
+  Navbar
+─────────────────────────────────────────────────────────*/
+.header {
+	background: #000;
+  }
+  
+  .navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+  }
+  
+  .logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+  }
+  
+  .navbar ul {
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+	gap: 1.5rem;
+  }
+  
+  .navbar li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1rem;
+	transition: color 0.2s;
+  }
+  
+  .navbar li.active a,
+  .navbar li a:hover {
+	color: #ff9c00;
+  }
+  
+  /*─────────────────────────────────────────────────────────
+	Main Content
+  ─────────────────────────────────────────────────────────*/
+  .allContent {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	max-width: 1000px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	border-radius: 10px;
+	background-color: #333333;
+	color: #ffffff;
+  }
+  
+  .leftContent,
+  .rightContent {
+	background: rgba(0, 0, 0, 0);
+	padding: 1.5rem;
+	flex: 1 1 300px;
+	border-radius: 8px;
+  }
+  
+  .centerContent {
+	background: rgba(0, 0, 0, 0);
+	padding: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 8px;
+  }
+  
+  .rightContent ul {
+	list-style: disc inside;
+  }
+  
+  .rightContent li {
+	margin-bottom: 0.5rem;
+  }
+  
+  /*─────────────────────────────────────────────────────────
+	Footer
+  ─────────────────────────────────────────────────────────*/
+  #footer {
+	text-align: center;
+	background: #111;
+	color: #888;
+	padding: 1.5rem 0;
+	margin-top: auto;
+  }
+  
+  /*─────────────────────────────────────────────────────────
+	Responsive
+  ─────────────────────────────────────────────────────────*/
+  @media (max-width: 768px) {
+	.logo {
+	  font-size: 2rem;
+	}
+	
+	.navbar ul {
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+  }
+  
+  
+  /*---------------------------------------------------------
+   Carousel Styles 
+  --------------------------------------------------------- */
+  .rightContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .rightContent img {
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+	transition: opacity 0.5s ease-in-out;
+	width: 500px;
+	height: 380px;
+	object-fit: cover;
+  }
+  
+  .rightContent .car-type-label {
+	margin-top: 10px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ff9c00;
+	background-color: #222;
+	padding: 8px 16px;
+	border-radius: 12px;
+	width: fit-content;
+	text-align: center;
+	user-select: none;
+  }
+  
+  .rightContent a {
+	margin: 10px 15px;
+	padding: 8px 16px;
+	background-color: #ff9c00;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 8px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+  }
+  
+  .rightContent a:hover {
+	background-color: #e68a00;
+  }
+  
+  /* Style the car type input box to look like a label */
+  .rightContent input[name="iname"] {
+	margin-top: 10px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #ff9c00;
+	background-color: #222;
+	padding: 8px 16px;
+	border-radius: 12px;
+	width: fit-content;
+	text-align: center;
+	border: none;
+	outline: none;
+	user-select: none;
+	pointer-events: none;
+  }
+  
